@@ -40,5 +40,8 @@ public class Card{
     @JoinColumn(name = "account_id")
     private Account account;
 
+    public Card(Account account) {
+        this.account = account;
+    }
 }
 

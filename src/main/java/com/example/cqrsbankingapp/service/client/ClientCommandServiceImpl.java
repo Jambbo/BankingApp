@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class ClientCommandServiceImpl implements ClientCommandService{
-    private EventService eventService;
+    private final EventService eventService;
     @Override
     public void create(Client object) {
         ClientCreateEvent clientCreateEvent = new ClientCreateEvent(object);

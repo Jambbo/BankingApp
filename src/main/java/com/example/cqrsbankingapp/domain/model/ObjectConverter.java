@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Convert;
 import lombok.SneakyThrows;
-
+//Converts object to save in db postgres
 @Convert
 public class ObjectConverter implements AttributeConverter<Object, String> {
 

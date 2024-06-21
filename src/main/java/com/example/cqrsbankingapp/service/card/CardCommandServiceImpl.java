@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class CardCommandServiceImpl implements CardCommandService{
-    private EventService eventService;
+    private final EventService eventService;
     @Override
     public void create(Card object) {
         CardCreateEvent cardCreateEvent = new CardCreateEvent(object);

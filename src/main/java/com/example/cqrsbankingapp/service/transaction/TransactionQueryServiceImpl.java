@@ -11,7 +11,7 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class TransactionQueryServiceImpl implements TransactionQueryService{
-    private TransactionRepository transactionRepository;
+    private final TransactionRepository transactionRepository;
     @Override
     public Transaction getById(UUID id) {
         return transactionRepository.findById(id).orElseThrow(ResourceNotFoundException::new);

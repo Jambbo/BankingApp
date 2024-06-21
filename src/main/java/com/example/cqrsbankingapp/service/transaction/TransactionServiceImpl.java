@@ -13,8 +13,8 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class TransactionServiceImpl implements TransactionService {
-    private TransactionCommandService commandService;
-    private TransactionQueryService queryService;
+    private final TransactionCommandService commandService;
+    private final TransactionQueryService queryService;
 
     @Override
     public void create(Transaction object) {

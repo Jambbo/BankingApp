@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class TransactionCommandServiceImpl implements TransactionCommandService{
-    private EventService eventService;
+    private final EventService eventService;
     @Override
     public void create(Transaction object) {
         TransactionCreateEvent event = new TransactionCreateEvent(object);
