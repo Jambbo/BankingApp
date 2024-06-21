@@ -30,4 +30,9 @@ public class CardServiceImpl implements CardService{
     public Card getById(UUID id) {
         return queryService.getById(id);
     }
+
+    @Override
+    public boolean existsByNumberAndDate(String number, String date) {
+        return queryService.existsByNumberAndDate(number, date);
+    }
 }
