@@ -35,4 +35,9 @@ public class CardServiceImpl implements CardService{
     public boolean existsByNumberAndDate(String number, String date) {
         return queryService.existsByNumberAndDate(number, date);
     }
+
+    @Override
+    public Card getByNumberAndDateAndCvv(String number, String date, String cvv) {
+            return queryService.getByNumberAndDateAndCvv(number,date,cvv);
+    }
 }

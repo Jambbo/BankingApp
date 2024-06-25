@@ -8,6 +8,7 @@ import com.example.cqrsbankingapp.web.dto.TransactionDto;
 import com.example.cqrsbankingapp.web.dto.mapper.TransactionMapper;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,6 +24,7 @@ public class TransactionController {
     private final TransactionMapper transactionMapper;
 
     @PostMapping("/create")
+    @PreAuthorize("@ssi.canAccessCard(#dto.from)")
     public void create(
             @RequestBody @Validated(OnCreate.class) final TransactionDto dto
             ){
@@ -37,6 +39,7 @@ public class TransactionController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("@ssi.canAccessTransaction(#id)")
     public TransactionDto getTransactionById(
             @PathVariable final UUID id
     ){

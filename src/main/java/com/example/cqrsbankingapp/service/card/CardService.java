@@ -14,4 +14,6 @@ extends QueryService<Card>, CommandService<Card> {
     void createByClientId(UUID id);
 
     boolean existsByNumberAndDate(String number, String date);
+
+    Card getByNumberAndDateAndCvv(String number, String date, String cvv);
 }
