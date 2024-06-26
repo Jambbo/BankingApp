@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${HOST}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: none
+  kafka:
+    listener:
+      ack-mode: manual # acknowledge mode - essentially this is an information about that we've read
+      #the message and kafka can give the next message, so it won't be transferred anyone from handlers,
+      #that message, that we've marked as acknowledged. Manual means that we'll manually specify that we
+      # have agreed with something, and we've processed this message
+    consumer:
+      bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+      group-id: ${KAFKA_BROKER_ID}
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

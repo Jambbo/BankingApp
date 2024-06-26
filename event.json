@@ -1,0 +1,156 @@
+{
+  "schema": {
+    "type": "struct",
+    "fields": [
+      {
+        "type": "int64",
+        "optional": false,
+        "field": "id"
+      },
+      {
+        "type": "string",
+        "optional": false,
+        "field": "dtype"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "field": "aggregate_id"
+      },
+      {
+        "type": "string",
+        "optional": false,
+        "field": "type"
+      },
+      {
+        "type": "int64",
+        "optional": false,
+        "name": "io.debezium.time.MicroTimestamp",
+        "version": 1,
+        "default": 0,
+        "field": "timestamp"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "name": "io.debezium.data.Json",
+        "version": 1,
+        "field": "payload"
+      }
+    ],
+    "optional": false,
+    "name": "pg-replica.public.events.Value"
+  },
+  "payload": {
+    "id": 1,
+    "dtype": "ClientCreateEvent",
+    "aggregate_id": null,
+    "type": "CLIENT_CREATE",
+    "timestamp": 1719399989716639,
+    "payload": "{\"id\": null, \"name\": \"Max\", \"cards\": null, \"account\": null, \"password\": \"$2a$10$YYN9VjfNr95XN8GbMf6AUerA2/USnwHtTsabbMZ5aImpZLmqMdL0y\", \"username\": \"mdax2005@max.com\"}"
+  }
+},
+{
+  "schema": {
+    "type": "struct",
+    "fields": [
+      {
+        "type": "int64",
+        "optional": false,
+        "field": "id"
+      },
+      {
+        "type": "string",
+        "optional": false,
+        "field": "dtype"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "field": "aggregate_id"
+      },
+      {
+        "type": "string",
+        "optional": false,
+        "field": "type"
+      },
+      {
+        "type": "int64",
+        "optional": false,
+        "name": "io.debezium.time.MicroTimestamp",
+        "version": 1,
+        "default": 0,
+        "field": "timestamp"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "name": "io.debezium.data.Json",
+        "version": 1,
+        "field": "payload"
+      }
+    ],
+    "optional": false,
+    "name": "pg-replica.public.events.Value"
+  },
+  "payload": {
+    "id": 2,
+    "dtype": "ClientCreateEvent",
+    "aggregate_id": null,
+    "type": "CLIENT_CREATE",
+    "timestamp": 1719400287323229,
+    "payload": "{\"id\": null, \"name\": \"Max\", \"cards\": null, \"account\": null, \"password\": \"$2a$10$rsNXkZiyi.1j7CvK0ZXil.hKsUvZtWrHYGC7/lZlubnobf61ReK/m\", \"username\": \"mdax2005@max.com\"}"
+  }
+},
+{
+  "schema": {
+    "type": "struct",
+    "fields": [
+      {
+        "type": "int64",
+        "optional": false,
+        "field": "id"
+      },
+      {
+        "type": "string",
+        "optional": false,
+        "field": "dtype"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "field": "aggregate_id"
+      },
+      {
+        "type": "string",
+        "optional": false,
+        "field": "type"
+      },
+      {
+        "type": "int64",
+        "optional": false,
+        "name": "io.debezium.time.MicroTimestamp",
+        "version": 1,
+        "default": 0,
+        "field": "timestamp"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "name": "io.debezium.data.Json",
+        "version": 1,
+        "field": "payload"
+      }
+    ],
+    "optional": false,
+    "name": "pg-replica.public.events.Value"
+  },
+  "payload": {
+    "id": 1,
+    "dtype": "ClientCreateEvent",
+    "aggregate_id": null,
+    "type": "CLIENT_CREATE",
+    "timestamp": 1719400564797188,
+    "payload": "{\"id\": null, \"name\": \"Max\", \"cards\": null, \"account\": null, \"password\": \"$2a$10$JIfz7py/90ptDSJ.EMDnS.gE70yoQ.g0UsIrcph9oCA4SfeBAKTyS\", \"username\": \"mdax2005@max.com\"}"
+  }
+}
